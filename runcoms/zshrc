@@ -11,4 +11,30 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias da="cd ~/work/developerauction"
+alias wk="cd ~/code/wiktionary"
+alias z="zeus"
+alias zz="script/zeus"
+alias g="git"
+alias gsp="git smart-pull"
+alias gst="git status"
+alias gco="git checkout"
+alias shutdown="sudo shutdown -P now"
+alias hdbr="pg_restore --verbose --clean --no-acl --no-owner -U cgag -d devauc-dev latest.dump"
+#alias hdbc="curl -o latest.dump `heroku pgbackups:url --app=devauc`"
 
+## Customize to your needs...
+##
+alias rake='noglob rake'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export EDITOR=vim
+export PATH="$HOME/.cabal/bin:/usr/class/cs143/cool/bin:/usr/local/heroku/bin:$PATH"
+export HISTSIZE=100000
+
+eval `dircolors ./dircolors-solarized/dircolors.ansi-dark` 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+alias android-connect="mtpfs -o allow_other /media/GalaxyNexus"
+alias android-disconnect="fusermount -u /media/GalaxyNexus"
